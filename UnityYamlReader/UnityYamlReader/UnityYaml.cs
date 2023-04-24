@@ -1,10 +1,23 @@
 ﻿using System.Collections.Immutable;
 using System.Text.RegularExpressions;
+using YamlDotNet.Serialization;
 
 namespace UnityYamlReaderSystem
 {
     public class UnityYaml
     {
+        public static IDeserializer Deserializer
+        {
+            get
+            {
+                return _Deserializer ??= new DeserializerBuilder()
+                    .IgnoreUnmatchedProperties()
+                    .Build();
+            }
+        }
+
+        private static IDeserializer? _Deserializer;
+
         private readonly string rawString;
         static readonly Regex YamlVersionRegex = new Regex(@"(?<=%YAML )[0-9.]+", RegexOptions.Compiled);
         static readonly Regex TagRegex = new Regex(@"(?<=%TAG !u! tag:)[a-zA-Z.0-9]+,\d+(?=:)", RegexOptions.Compiled);
