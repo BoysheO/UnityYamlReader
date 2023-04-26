@@ -7,12 +7,12 @@ using YamlDotNet.Serialization;
 using YamlDotNet.Serialization.NamingConventions;
 
 
-var go = new object[2]
-{
-    new GameObject(),
-    ClassId.Terrain,
-};
-var goYaml = new Serializer().Serialize(go);
+// var go = new object[2]
+// {
+//     new GameObject(),
+//     ClassId.Terrain,
+// };
+// var goYaml = new Serializer().Serialize(go);
 
 Console.WriteLine("Hello, World!");
 var text = Encoding.UTF8.GetString(Resource.Properties.Resources.exampleButton);

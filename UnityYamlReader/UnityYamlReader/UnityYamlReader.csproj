@@ -8,6 +8,7 @@
         <Authors>BoysheO</Authors>
         <RepositoryUrl>github.com/boysheo/UnityYamlReader</RepositoryUrl>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageVersion>1.0.1</PackageVersion>
     </PropertyGroup>
 
     <ItemGroup>
